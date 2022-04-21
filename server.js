@@ -32,7 +32,7 @@ app.get("/api/:date?", (req, res) => {
   else date = new Date(req.params.date);
   if (date.getTime() === date.getTime()) {
     res.json({
-      unix: `${date.getTime()}`,
+      unix: date.getTime(),
       utc: `${date.toUTCString()}`
     });
   }
